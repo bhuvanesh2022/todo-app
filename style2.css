@@ -1,0 +1,23 @@
+.tabs {
+    margin-bottom: 20px;
+  }
+  
+  .tablink {
+    background-color: #f2f2f2;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tabcontent {
+    display: none;
+  }
+  
+  input[type="text"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }

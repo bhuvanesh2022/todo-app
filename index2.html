@@ -1,0 +1,68 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            // Retrieve POST parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('uname');
+            const password = urlParams.get('psw');
+            const defaultPassword = '9922008399';
+            // Check if the password is correct
+            // console.log(password,defaultPassword,password !== defaultPassword);
+            if (password !== defaultPassword) {
+                // Redirect to index.html with error code
+                const url = 'index.html?error_code=0';
+                window.location.href = url;
+            }
+
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <body>
+
+        <div id="app">
+            <h1>to do list</h1>
+            <div class="tabs">
+                <button class="tablink" onclick="openTab(event, 'tab1')">Tab 1</button>
+                <button class="tablink" onclick="openTab(event, 'tab2')">Tab 2</button>
+              </div>
+              
+              <div id="tab1" class="tabcontent">
+                <h2>Tab 1</h2>
+                <ul id="todoList1"></ul>
+                <!-- <input type="text" id="taskInput1" placeholder="Add new task"> -->
+                <!-- <button onclick="addTask(1)">Add</button> -->
+              </div>
+              
+              <div id="tab2" class="tabcontent">
+                <h2>Tab 2</h2>
+                <ul id="todoList2"></ul>
+                <!-- <input type="text" id="taskInput2" placeholder="Add new task"> -->
+                <!-- <button onclick="addTask(2)">Add</button> -->
+              </div>
+            <ul>
+
+            </ul>
+
+            <input type="text" placeholder="New task">
+            <button class='btn_add'>Add</button>
+
+            <p>Insert a new task</p>
+        </div>
+        <!-- js -->
+        <script src="jason.js"></script>
+    </body>
+</body>
+
+</html>
